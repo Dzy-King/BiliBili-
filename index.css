@@ -1,0 +1,255 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration : none;
+}
+
+body, html{
+    height: 100%;
+}
+#app{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+.m-head{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    width: 414px;
+    height: 49px;
+    background-color:#fff;
+    z-index:3;
+}
+.login{
+    margin: 10px;
+}
+.search-input{
+    display: flex;
+    align-items: center;
+    width: 132px;
+    height: 24px;
+    background-color: #f4f4f4;
+    border-radius: 28px;
+    margin-right: 16px;
+    font-size: 12px;
+}
+.search-input span{
+    width: 92px;
+    white-space:nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #999;
+}
+.search-input svg{
+    margin:0 5px 0 10px;
+}
+
+.avater svg{
+    border-radius: 50%;
+}
+.download-app{
+    display: flex;
+    width: 88px;
+    height: 27px;
+    margin-left: 16px;
+    background-color: #fb7299;
+    color: #ffffff;
+    font-size: 3.46667vw;
+    justify-content: center;
+    align-items: center;
+    font-weight: lighter;
+}
+.nav-box{
+    position: fixed;
+    top: 45px;
+    left: 0;
+    width: 375px;
+    height: 40px;
+    margin-top: 5px;
+    z-index: 1;
+}
+.nav-box.hide{
+    display: none;
+}
+.nav-box .nav-list{
+    width: 90%;
+    overflow-x: scroll;
+    white-space: nowrap;
+    background-color: #fff;
+}
+.nav-box .nav-list::-webkit-scrollbar{
+    display: none;
+}
+
+.nav-box .nav-list .nav-item{
+    height: 30px;
+    color: #757575;
+    font-size: 14px;
+    line-height: 30px;
+    margin: 0 15px;
+    display:inline-block;
+    border-bottom: 2px solid transparent;
+}
+.nav-box .nav-list .nav-item.active{
+    border-bottom: 2px solid #fb7299;
+    color: #fb7299;
+}
+.nav-box .down{
+    position: fixed;
+    top: 44px;
+    right: -10px;
+    width: 40px;
+    height: 20px;
+}
+.hide-nav-box{
+    position: fixed;
+    top: 45px;
+    left: 0;
+    width: 375px;
+    height: 40px;
+    margin-top: 5px;
+    z-index:2;
+    transition: top .3s;
+}
+.hide-nav-box.hide{
+    /*display: none;*/
+    top:-117px
+}
+.hide-nav-box .nav-list{
+    height: 150px;
+    background-color: #fff;
+    width: 100%;
+}
+.hide-nav-box .nav-list .nav-item{
+    height: 30px;
+    color: #757575;
+    font-size: 14px;
+    line-height: 30px;
+    padding: 0 15px;
+    display:inline-block;
+}
+.hide-nav-box .up{
+    position: absolute;
+    top:110px;
+    left: 167px;
+}
+
+.banner-box{
+    position: relative;
+    top: 90px;
+    border-radius: 6px;
+    left:50%;
+    transform: translateX(-50%);
+    width: 350px;
+    height: 110px;
+    overflow: hidden;
+}
+.banner-box .banner-list{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(350px * 4);
+    transition: left .3s;
+}
+.banner-box .banner-list .banner{
+    float: left;
+    width: 350px;
+    height: 110px;
+
+}
+.banner .poster{
+    width: 100%;
+    height: 100%;
+}
+
+.dot-list{
+    position: absolute;
+    display: flex;
+    top: 185px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 10px;
+    align-items: center;
+    background-color: rgba(0,0,0,.5);
+    border-radius: 5px;
+}
+.dot-list .dot{
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 0 3px 0 3px;
+}
+.dot-list .dot.active{
+    background-color: red;
+}
+.video-list{
+    padding-top: 100px;
+    width: 100%;
+    height: 100%;
+}
+.video-list .card-box{
+    width: 100%;
+    height: 97px;
+}
+.video-list .card-box::after{
+    display: block;
+    content: '';
+    clear: both;
+}
+.video-list .card-box .v-card{
+    position: relative;
+    float: left;
+    display: inline-block;
+    width: 46%;
+    height: 160px;
+    margin-left: 10px;
+}
+.title{
+    color:#212121 ;
+    font-size: 12px;
+    width: 173px;
+    height: 34px;
+    /*单行超出部分打点*/
+    /*white-space: nowrap;*/
+    /*text-overflow:ellipsis;*/
+
+
+    /*多行文本超出部分打点*/
+    overflow: hidden;
+    /*设置为伸缩盒*/
+    display: -webkit-box;
+    -webkit-line-clamp:2;
+
+    -webkit-box-orient: vertical;
+}
+.play{
+    position: absolute;
+    top: 75px;
+    left: 7px;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+}
+.scan{
+    position: absolute;
+    top: 75px;
+    left: 110px;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+}
+.play svg{
+     fill: #fff;
+}
+.scan svg{
+    fill: #fff;
+}
+
+
+
